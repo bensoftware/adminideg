@@ -9,7 +9,7 @@
 @section('page-content')
 <div class="card">
   <div class="card-header">
-    <h3 class="card-title">Institut</h3>
+    <a href="{{route('institut.create')}}" type="button" class="btn btn-dark"e style="color:white">Ajout des inforformations</a>
   </div>
   <!-- /.card-header -->
   <div class="card-body">
@@ -26,7 +26,7 @@
         </div>
         <div class="col-sm-12 col-md-6">
           <div id="example1_filter" class="dataTables_filter">
-            <label>Search:<input type="search" class="form-control form-control-sm" placeholder=""
+            <label>RECHERCEHE:<input type="search" class="form-control form-control-sm" placeholder=""
                 aria-controls="example1">
             </label>
           </div>
@@ -39,16 +39,17 @@
             <thead>
               <tr role="row">
                 <th class="sorting_asc" tabindex="0" aria-controls="example1" rowspan="1" colspan="1"
-                  aria-sort="ascending" aria-label="Rendering engine: activate to sort column descending">Rendering
-                  engine</th>
+                  aria-sort="ascending" aria-label="Rendering engine: activate to sort column descending">LIBELLE</th>
                 <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1"
-                  aria-label="Browser: activate to sort column ascending">Browser</th>
+                  aria-label="Browser: activate to sort column ascending">PHONE</th>
                 <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1"
-                  aria-label="Platform(s): activate to sort column ascending">Platform(s)</th>
+                  aria-label="Platform(s): activate to sort column ascending">FAX</th>
                 <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1"
-                  aria-label="Engine version: activate to sort column ascending">Engine version</th>
+                  aria-label="Engine version: activate to sort column ascending">MAIL</th>
+                  <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1"
+                    aria-label="CSS grade: activate to sort column ascending">BANNIERE</th>
                 <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1"
-                  aria-label="CSS grade: activate to sort column ascending">CSS grade</th>
+                  aria-label="CSS grade: activate to sort column ascending">LOGGO</th>
               </tr>
             </thead>
             <tbody>
@@ -58,6 +59,7 @@
                 <td>Win 98+ / OSX.2+</td>
                 <td>1.7</td>
                 <td>A</td>
+                <td>b</td>
               </tr>
               <tr role="row" class="even">
                 <td tabindex="0" class="sorting_1">Gecko</td>
@@ -65,6 +67,7 @@
                 <td>Win 98+ / OSX.2+</td>
                 <td>1.8</td>
                 <td>A</td>
+                <td>b</td>
               </tr>
               <tr role="row" class="odd">
                 <td tabindex="0" class="sorting_1">Gecko</td>
@@ -72,64 +75,17 @@
                 <td>Win 98+ / OSX.2+</td>
                 <td>1.8</td>
                 <td>A</td>
-              </tr>
-              <tr role="row" class="even">
-                <td tabindex="0" class="sorting_1">Gecko</td>
-                <td>Firefox 3.0</td>
-                <td>Win 2k+ / OSX.3+</td>
-                <td>1.9</td>
-                <td>A</td>
-              </tr>
-              <tr role="row" class="odd">
-                <td class="sorting_1" tabindex="0">Gecko</td>
-                <td>Camino 1.0</td>
-                <td>OSX.2+</td>
-                <td>1.8</td>
-                <td>A</td>
-              </tr>
-              <tr role="row" class="even">
-                <td class="sorting_1" tabindex="0">Gecko</td>
-                <td>Camino 1.5</td>
-                <td>OSX.3+</td>
-                <td>1.8</td>
-                <td>A</td>
-              </tr>
-              <tr role="row" class="odd">
-                <td class="sorting_1" tabindex="0">Gecko</td>
-                <td>Netscape 7.2</td>
-                <td>Win 95+ / Mac OS 8.6-9.2</td>
-                <td>1.7</td>
-                <td>A</td>
-              </tr>
-              <tr role="row" class="even">
-                <td class="sorting_1" tabindex="0">Gecko</td>
-                <td>Netscape Browser 8</td>
-                <td>Win 98SE+</td>
-                <td>1.7</td>
-                <td>A</td>
-              </tr>
-              <tr role="row" class="odd">
-                <td class="sorting_1" tabindex="0">Gecko</td>
-                <td>Netscape Navigator 9</td>
-                <td>Win 98+ / OSX.2+</td>
-                <td>1.8</td>
-                <td>A</td>
-              </tr>
-              <tr role="row" class="even">
-                <td class="sorting_1" tabindex="0">Gecko</td>
-                <td>Mozilla 1.0</td>
-                <td>Win 95+ / OSX.1+</td>
-                <td>1</td>
-                <td>A</td>
+                <td>b</td>
               </tr>
             </tbody>
             <tfoot>
               <tr>
-                <th rowspan="1" colspan="1">Rendering engine</th>
-                <th rowspan="1" colspan="1">Browser</th>
-                <th rowspan="1" colspan="1">Platform(s)</th>
-                <th rowspan="1" colspan="1">Engine version</th>
-                <th rowspan="1" colspan="1">CSS grade</th>
+                <th rowspan="1" colspan="1">LIBELLE</th>
+                <th rowspan="1" colspan="1">PHONE</th>
+                <th rowspan="1" colspan="1">FAX</th>
+                <th rowspan="1" colspan="1">MAIL</th>
+                <th rowspan="1" colspan="1">BANNIERE</th>
+                <th rowspan="1" colspan="1">LOGO</th>
               </tr>
             </tfoot>
           </table>

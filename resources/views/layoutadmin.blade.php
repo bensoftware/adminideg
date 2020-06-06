@@ -4,8 +4,9 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>{{ config('app.name', 'IGED') }}</title>
-  <!-- Tell the browser to be responsive to screen width -->
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Tell the browser to be responsive to screen width     <meta name="viewport" content="width=device-width, initial-scale=1">-->
+
+  <meta name="csrf-token" content="{{ csrf_token() }}">
   <link rel="icon" type="image/jpg" href="{{URL::asset('public/dist/img/logo.jpg')}}" sizes="196x196" />
     <!-- iCheck -->
     <link rel="stylesheet" href="{{URL::asset('public/plugins/icheck-bootstrap/icheck-bootstrap.min.css')}}">
