@@ -16,7 +16,8 @@ class InstitutController extends Controller
     public function index()
     {
         //
-          return view('institut.institut');
+        $institut=Institut::all();
+          return view('institut.institut')->with('institut', $institut);
     }
 
     /**
@@ -47,9 +48,9 @@ class InstitutController extends Controller
                         'phone'=>'required',
                         'fixe'=>'required',
                         'adresse'=>'required',
-                        'responsable'=>'required'
+                        'responsable'=>'required',
+                        'facebook'=>'required'
                     ]);
-
                     if ($validator->fails()) {
                         return redirect(route('institut.create'))
                                     ->withErrors($validator)
@@ -57,15 +58,15 @@ class InstitutController extends Controller
                     }
 
          $institut=new Institut();
-
-        Institut::create([
+         Institut::create([
           'libelle'=>$request->libelle,
           'description'=>$request->description,
           'mail'=>$request->mail,
           'phone'=>$request->phone,
           'fixe'=>$request->fixe,
           'adresse'=>$request->adresse,
-          'responsable'=>$request->responsable
+          'responsable'=>$request->responsable,
+          'facebook'=>$request->facebook
         ]);
         return redirect(route('institut.index'));
     }
@@ -87,9 +88,11 @@ class InstitutController extends Controller
      * @param  \App\Institut  $institut
      * @return \Illuminate\Http\Response
      */
-    public function edit(Institut $institut)
-    {
-        //
+    public function edit(Institut $institut){
+            //
+           $institut=Institut::findOrFail($institut->id);
+           return view('institut.update',compact('institut'));
+
     }
 
     /**
@@ -99,9 +102,9 @@ class InstitutController extends Controller
      * @param  \App\Institut  $institut
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Institut $institut)
-    {
-        //
+    public function update(Request $request, Institut $institut){
+        $institut->update($request->all());
+      return redirect(route('institut.index'));
     }
 
     /**

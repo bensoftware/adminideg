@@ -15,22 +15,6 @@
   <div class="card-body">
     <div id="example1_wrapper" class="dataTables_wrapper dt-bootstrap4">
       <div class="row">
-        <div class="col-sm-12 col-md-6">
-          <div class="dataTables_length" id="example1_length"><label>Show <select name="example1_length"
-                aria-controls="example1" class="custom-select custom-select-sm form-control form-control-sm">
-                <option value="10">10</option>
-                <option value="25">25</option>
-                <option value="50">50</option>
-                <option value="100">100</option>
-              </select> entries</label></div>
-        </div>
-        <div class="col-sm-12 col-md-6">
-          <div id="example1_filter" class="dataTables_filter">
-            <label>RECHERCEHE:<input type="search" class="form-control form-control-sm" placeholder=""
-                aria-controls="example1">
-            </label>
-          </div>
-        </div>
       </div>
       <div class="row">
         <div class="col-sm-12">
@@ -43,59 +27,53 @@
                 <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1"
                   aria-label="Browser: activate to sort column ascending">PHONE</th>
                 <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1"
-                  aria-label="Platform(s): activate to sort column ascending">FAX</th>
+                  aria-label="Platform(s): activate to sort column ascending">FIXE</th>
                 <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1"
                   aria-label="Engine version: activate to sort column ascending">MAIL</th>
                   <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1"
-                    aria-label="CSS grade: activate to sort column ascending">BANNIERE</th>
+                    aria-label="CSS grade: activate to sort column ascending">FACAEBOOK</th>
                 <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1"
-                  aria-label="CSS grade: activate to sort column ascending">LOGGO</th>
+                  aria-label="CSS grade: activate to sort column ascending">RESPONSABLE</th>
               </tr>
             </thead>
             <tbody>
+          @foreach($institut as $institute)
               <tr role="row" class="odd">
-                <td tabindex="0" class="sorting_1">Gecko</td>
-                <td>Firefox 1.0</td>
-                <td>Win 98+ / OSX.2+</td>
-                <td>1.7</td>
-                <td>A</td>
-                <td>b</td>
+                <td tabindex="0" class="sorting_1">{{$institute->libelle}}</td>
+                <td>{{$institute->phone}}</td>
+                <td>{{$institute->fixe}}</td>
+                <td>{{$institute->mail}}</td>
+                <td>{{$institute->facebook}}</td>
+                <td>{{$institute->responsable}}</td>
+                 <td>
+                  <a href="{{route('institut.edit',$institute->id)}}" type="button" class="btn btn-dark"e style="color:white">Modifier</a>
+                 </td>
+                 <td>
+                     <form action="" method="POST">
+                         @csrf
+                         @method('DELETE')
+                         <button type="submit" class="btn btn-danger" disabled>Delete</button>
+                     </form>
+                 </td>
               </tr>
-              <tr role="row" class="even">
-                <td tabindex="0" class="sorting_1">Gecko</td>
-                <td>Firefox 1.5</td>
-                <td>Win 98+ / OSX.2+</td>
-                <td>1.8</td>
-                <td>A</td>
-                <td>b</td>
-              </tr>
-              <tr role="row" class="odd">
-                <td tabindex="0" class="sorting_1">Gecko</td>
-                <td>Firefox 2.0</td>
-                <td>Win 98+ / OSX.2+</td>
-                <td>1.8</td>
-                <td>A</td>
-                <td>b</td>
-              </tr>
+            @endforeach
             </tbody>
             <tfoot>
+              <div class="nav nav-tabs main-tabs" id="nav-tab" role="tablist">
+        </div>
               <tr>
                 <th rowspan="1" colspan="1">LIBELLE</th>
                 <th rowspan="1" colspan="1">PHONE</th>
-                <th rowspan="1" colspan="1">FAX</th>
+                <th rowspan="1" colspan="1">FIXE</th>
                 <th rowspan="1" colspan="1">MAIL</th>
-                <th rowspan="1" colspan="1">BANNIERE</th>
-                <th rowspan="1" colspan="1">LOGO</th>
+                <th rowspan="1" colspan="1">FACEBOOK</th>
+                <th rowspan="1" colspan="1">RESPONSABLE</th>
               </tr>
             </tfoot>
           </table>
         </div>
       </div>
       <div class="row">
-        <div class="col-sm-12 col-md-5">
-          <div class="dataTables_info" id="example1_info" role="status" aria-live="polite">Showing 1 to 10 of 57 entries
-          </div>
-        </div>
         <div class="col-sm-12 col-md-7">
           <div class="dataTables_paginate paging_simple_numbers" id="example1_paginate">
             <ul class="pagination">
@@ -124,5 +102,4 @@
   </div>
   <!-- /.card-body -->
 </div>
-
 @endsection

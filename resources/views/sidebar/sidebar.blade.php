@@ -2,8 +2,8 @@
  <aside class="main-sidebar sidebar-dark-primary elevation-4">
    <!-- Brand Logo -->
    <a href="index3.html" class="brand-link">
-     <img src="{{URL::asset('public/dist/img/logo.jpg')}}" alt="Admin IGED Logo" class="brand-image img-circle elevation-3"
-          style="opacity: .8">
+     <img src="{{URL::asset('public/dist/img/logo.jpg')}}" alt="" class="brand-image img-circle elevation-3"
+          style="opacity:2.8">
      <span class="brand-text font-weight-light">Admin IGED</span>
    </a>
 

@@ -30,6 +30,6 @@ Route::get('/admin/filliere', function () {
     return view('filliere.filliere');
 });
 
-
+;
 
 Route::resource('/admin/institut','InstitutController');

@@ -14,8 +14,7 @@ class Institut extends Model
      *
      * @var array
      */
-    protected $fillable = [
-        'libelle','phone','mail','fixe','description','adresse','responsable'
+    protected $fillable = ['id','libelle','phone','mail','fixe','description','adresse','responsable','facebook','linkedin'
     ];
 
 }

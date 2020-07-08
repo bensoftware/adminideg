@@ -20,15 +20,10 @@ class CreateInstitutsTable extends Migration
             $table->string('phone',15);
             $table->string('fixe',15 );
             $table->string('mail',30);
-
             $table->text('adresse');
-            /**
-             *    $table->text('ville'); $table->text('Pays');
-             *
-            */
             $table->text('description');
-            $table->string('banniere',100);
-            $table->string('logo',100);
+            $table->string('facebook',255);
+            $table->string('linkedin',255)->nullable();
             $table->timestamps();
         });
     }
