@@ -1,7 +1,5 @@
 <?php
-
 use Illuminate\Support\Facades\Route;
-
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -12,24 +10,19 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |addinstitut
 */
-
 Route::get('/', function () {
     return view('index');
 });
-
 Route::get('/tableau-de-bord', function () {
     return view('index');
 });
-
 Route::get('/admin/domaine', function () {
     return view('domaine.domaine');
 });
-
-
 Route::get('/admin/filliere', function () {
     return view('filliere.filliere');
 });
 
-;
-
 Route::resource('/admin/institut','InstitutController');
+Route::resource('/admin/postuler','PostulerController');
+Route::resource('/admin/abonement','AbonementController');

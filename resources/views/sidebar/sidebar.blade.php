@@ -6,7 +6,6 @@
           style="opacity:2.8">
      <span class="brand-text font-weight-light">Admin IGED</span>
    </a>
-
    <!-- Sidebar -->
    <div class="sidebar">
      <!-- Sidebar user panel (optional) -->
@@ -34,20 +33,18 @@
            </a>
            <ul class="nav nav-treeview">
              <li class="nav-item">
-               <a href="{{url('/admin')}}" class="nav-link active">
+               <a href="{{url('/')}}" class="nav-link active">
                  <i class="far fa-circle nav-icon"></i>
                  <p>Tableau de bord</p>
                </a>
              </li>
-
            </ul>
          </li>
-
          <li class="nav-item has-treeview">
            <a href="#" class="nav-link">
              <i class="nav-icon fas fa-table"></i>
              <p>
-               Gestion de l'institut
+               Institut
                <i class="fas fa-angle-left right"></i>
              </p>
            </a>
@@ -60,41 +57,39 @@
              </li>
            </ul>
          </li>
-
          <li class="nav-item has-treeview ">
-           <a href="{{url('/admin/domain')}}" class="nav-link ">
+           <a href="{{url('/admin/postuler')}}" class="nav-link ">
              <i class="nav-icon fas fa-tasks"></i>
              <p>
-               Domaine/Secteur
+               Application
                <i class="right fas fa-angle-left"></i>
              </p>
            </a>
            <ul class="nav nav-treeview">
              <li class="nav-item">
-               <a href="{{url('/admin')}}" class="nav-link active">
+               <a href="{{url('/admin/postuler')}}" class="nav-link active">
                  <i class="far fa-circle nav-icon"></i>
-                 <p> Domaine/Secteur</p>
+                 <p>Liste des Applicantions</p>
                </a>
              </li>
-
            </ul>
          </li>
          <li class="nav-item has-treeview">
            <a href="#" class="nav-link">
              <i class="nav-icon fas fa-book"></i>
              <p>
-               Gestion des formations
+               Abonements
                <i class="fas fa-angle-left right"></i>
              </p>
            </a>
            <ul class="nav nav-treeview">
              <li class="nav-item">
-               <a href="" class="nav-link">
+               <a href="{{url('/admin/abonement')}}" class="nav-link">
                  <i class="far fa-circle nav-icon"></i>
-                 <p>Formations</p>
+                 <p>Abonements</p>
                </a>
              </li>
-           </ul>
+            </ul>
          </li>
        </ul>
      </nav>
