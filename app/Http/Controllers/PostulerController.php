@@ -78,8 +78,9 @@ class PostulerController extends Controller{
      * @return \Illuminate\Http\Response
      */
     public function destroy(Postuler $postuler){
-        $postule = Postuler::find($postule->id);
-        $postule->delete();
+        $postuler = Postuler::find($postuler->id);
+        $postuler->delete();
         return redirect('/admin/postuler')->with('success','applicants deleted!');
     }
+    
 }
