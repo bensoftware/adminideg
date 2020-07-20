@@ -7,6 +7,13 @@
     Institut du Groupe Educatif Descartes
 @endsection
 @section('page-content')
+<div class="col-sm-12">
+  @if(session()->get('success'))
+    <div class="alert alert-success">
+      {{ session()->get('success') }}
+    </div>
+  @endif
+</div>
 <div class="card">
   <div class="card-header">
     <a href="{{route('institut.create')}}" type="button" class="btn btn-dark"e style="color:white">Ajout des inforformations</a>

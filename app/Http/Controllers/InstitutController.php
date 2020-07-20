@@ -92,7 +92,6 @@ class InstitutController extends Controller
             //
            $institut=Institut::findOrFail($institut->id);
            return view('institut.update',compact('institut'));
-
     }
 
     /**
@@ -117,4 +116,5 @@ class InstitutController extends Controller
     {
         //
     }
+
 }

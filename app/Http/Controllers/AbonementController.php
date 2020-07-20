@@ -80,5 +80,9 @@ class AbonementController extends Controller{
     public function destroy(Abonement $abonement)
     {
         //
+
+        $abonement = Abonement::find($abonement->id);
+        $abonement->delete();
+        return redirect('/admin/abonement')->with('success','abonements deleted!');
     }
 }

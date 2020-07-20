@@ -69,7 +69,7 @@ class PostulerController extends Controller{
     public function update(Request $request, Postuler $postuler)
     {
         //
-    }
+}
 
     /**
      * Remove the specified resource from storage.
@@ -77,8 +77,9 @@ class PostulerController extends Controller{
      * @param  \App\Postuler  $postuler
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Postuler $postuler)
-    {
-        //
+    public function destroy(Postuler $postuler){
+        $postule = Postuler::find($postule->id);
+        $postule->delete();
+        return redirect('/admin/postuler')->with('success','applicants deleted!');
     }
 }

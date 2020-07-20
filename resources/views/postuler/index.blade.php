@@ -7,9 +7,16 @@
     Institut du Groupe Educatif Descartes
 @endsection
 @section('page-content')
+<div class="col-sm-12">
+  @if(session()->get('success'))
+    <div class="alert alert-success">
+      {{ session()->get('success') }}
+    </div>
+  @endif
+</div>
 <div class="card">
   <div class="card-header">
-    <a href="{{route('institut.create')}}" type="button" class="btn btn-dark"e style="color:white">Ajout des inforformations</a>
+    <a href="" type="button" class="btn btn-dark"e style="color:white" disabled>Inforformations</a>
   </div>
   <!-- /.card-header -->
   <div class="card-body">
@@ -28,10 +35,11 @@
                   aria-label="Browser: activate to sort column ascending">PRENOM(s)</th>
                 <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1"
                   aria-label="Platform(s): activate to sort column ascending">EMAIL</th>
-                <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1"
-                  aria-label="Engine version: activate to sort column ascending">FILLIERE</th>
+
                   <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1"
                     aria-label="CSS grade: activate to sort column ascending">PHONE</th>
+                    <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1"
+                      aria-label="Engine version: activate to sort column ascending">FILLIERE</th>
                 <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1"
                   aria-label="CSS grade: activate to sort column ascending">NIVEAU</th>
               </tr>
@@ -46,7 +54,7 @@
                 <td>{{$postuler->filliere}}</td>
                 <td>{{$postuler->niveau}}</td>
                  <td>
-                     <form action="{{route('postuler.destroy',$postuler->id)}}" method="POST">
+                     <form action="{{route('postuler.destroy',$postuler)}}" method="POST">
                          @csrf
                          @method('DELETE')
                          <button type="submit" class="btn btn-danger" >Delete</button>
@@ -62,8 +70,9 @@
                 <th rowspan="1" colspan="1">NOM(s)</th>
                 <th rowspan="1" colspan="1">PRENOM(s)</th>
                 <th rowspan="1" colspan="1">EMAIL</th>
-                <th rowspan="1" colspan="1">FILLIERE</th>
                 <th rowspan="1" colspan="1">PHONE</th>
+                <th rowspan="1" colspan="1">FILLIERE</th>
+
                 <th rowspan="1" colspan="1">NIVEAU</th>
               </tr>
             </tfoot>
